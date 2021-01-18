@@ -1,10 +1,42 @@
 package com.thinkful.blackjack;
 
 public class Card {
-    String suit;
-    String cardFace;
-    int value;
-    boolean turnedUp;
+    private String suit;
+    private String cardFace;
+    private int value;
+    private boolean turnedUp;
+
+    public String getSuit(){
+        return suit;
+    }
+
+    public void setSuit(String suit){
+        this.suit = suit;
+    }
+
+    public String getCardFace(){
+        return cardFace;
+    }
+
+    public void setCardFace(String cardFace){
+        this.cardFace = cardFace;
+    }
+
+    public int getValue(){
+        return value;
+    }
+
+    public void setValue(int value){
+        this.value = value;
+    }
+
+    public boolean isTurnedUp(){
+        return turnedUp;
+    }
+
+    public void setTurnedUp(boolean turnedUp){
+        this.turnedUp = turnedUp;
+    }
 
     public Card(){
         this("Ace", "Spades", 1, false);

@@ -6,13 +6,14 @@ public class Main {
         Card sevenSpades = new Card("7", "Spades", 8, false);
         Card jackClubs = new Card("Jack", "Clubs", 10, true);
 
-        sevenSpades.suit = "Spades";
-        sevenSpades.cardFace = "7";
+        sevenSpades.setSuit("Spades");
+        sevenSpades.setCardFace("7");
 
-        jackClubs.suit = "Clubs";
-        jackClubs.cardFace = "Jack";
+        jackClubs.setSuit("Clubs");
+        jackClubs.setCardFace("Jack");
 
-        System.out.printf("Card: %s of %s\n", sevenSpades.cardFace, sevenSpades.suit);
-        System.out.printf("Card: %s of %s\n", jackClubs.cardFace, jackClubs.suit);
+        System.out.printf("Card: %s of %s\n", sevenSpades.getCardFace(), sevenSpades.getSuit());
+        System.out.printf("Card: %s of %s\n", jackClubs.getCardFace(), jackClubs.getSuit());
+        System.out.printf("Card: %s of %s\n", aceSpades.getCardFace(), aceSpades.getSuit());
     }
 }
