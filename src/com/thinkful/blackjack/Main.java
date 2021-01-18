@@ -2,6 +2,7 @@ package com.thinkful.blackjack;
 
 public class Main {
     public static void main(String[] args){
+        Card aceSpades = new Card();
         Card sevenSpades = new Card("7", "Spades", 8, false);
         Card jackClubs = new Card("Jack", "Clubs", 10, true);
 
