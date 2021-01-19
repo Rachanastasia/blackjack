@@ -51,14 +51,5 @@ public class Card {
         this.setTurnedUp(turnedUp);
     }
 
-    @Override
-    public String toString() {
-        return String.format("Card: %s of %s (Value: %d, Turned Up: %b)",
-                this.cardFace, this.suit, this.value, this.turnedUp);
-    }
 
-    @Override public String toString() {
-        return String.format("%s%s%s",
-                this.getCardFace(), this.getSuit(), this.isTurnedUp()?"\u2191":"\u2193");
-    }
 }
