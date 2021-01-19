@@ -2,6 +2,7 @@ package com.thinkful.blackjack;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Deck {
     private List<Card> cards;
@@ -11,7 +12,7 @@ public class Deck {
         for (Suit suit: Suit.values()){
             for(Face face: Face.values()){
                 this.getCards().add(new Card(face, suit));
-                i++;
+                i=i+1;
             }
         }
     }
@@ -38,6 +39,23 @@ public class Deck {
     public void setCards(List<Card> cards){
         this.cards = cards;
     }
+
+    public void shuffle(){
+        Random ran = new Random();
+        for(int i=0; i<this.getCards().size(); i= i+1){
+            Card c = this.getCards().remove(i);
+            int randomNumber = ran.nextInt(this.getCards().size());
+            this.getCards().add(randomNumber, c);
+        }
+    }
+
+    public Card deal(){
+        if(this.getCards().isEmpty()){
+            return null;
+        }
+        return this.getCards().remove(0);
+    }
+
 
 }
 

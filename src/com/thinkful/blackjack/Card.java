@@ -42,7 +42,7 @@ public class Card {
         this(Face.ACE, Suit.SPADES, 1, false);
     }
     public Card(Face cardFace, Suit suit){
-        this(cardFace, suit, 1, false);
+        this(cardFace, suit, cardFace.value, false);
     }
     public Card(Face cardFace, Suit suit, int value, boolean turnedUp){
         this.setSuit(suit);
@@ -50,6 +50,14 @@ public class Card {
         this.setValue(value);
         this.setTurnedUp(turnedUp);
     }
+    @Override
+    public String toString() {
+        return String.format("%s%s%s",
+                this.getCardFace(), this.getSuit(), this.isTurnedUp()?"\u2191":"\u2193");
+    }
+
+
+
 
 
 }
