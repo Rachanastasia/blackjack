@@ -55,6 +55,18 @@ public class Card {
         return String.format("%s%s%s",
                 this.getCardFace(), this.getSuit(), this.isTurnedUp()?"\u2191":"\u2193");
     }
+    @Override
+    public boolean equals(Object obj){
+        if (this == obj) return true;
+        if (obj == null) return false;
+
+        if(getClass() != obj.getClass()) return false;
+
+        Card card = (Card) obj;
+
+        return this.getCardFace() == card.getCardFace() && this.getSuit() == card.getSuit();
+
+    }
 
 
 
